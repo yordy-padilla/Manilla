@@ -35,8 +35,12 @@ const Producto = () => {
 
   return (
         <div>
+            
+            <img src=".logo.pgn" alt="logo" width="300" height="200"/>
             <hr/>
-             <label for="mate">Material:</label>
+            <img src="https://cdnx.jumpseller.com/urbenmood/image/6850674/PS3493_Manilla_Pulsera_Hombres_Vintage_Cuero_Gancho_Marron_20cm.png?1684679556" alt="Manilla cuero" width="300" height="200"/>
+            <hr/> 
+            <label for="mate">Material:</label>
             <select id="mate" onChange={(e) => setMaterialSeleccionado(e.target.value)}>
             <option value="opcion3">Cuero</option>
             <option value="opcion4">Cuerda</option>
@@ -62,7 +66,7 @@ const Producto = () => {
             <option value="opcion10">Pesos</option>
             </select>
 
-            <br/>
+            
             <ul className="list-group">
                     {  
                         dijes.map(item =>(
