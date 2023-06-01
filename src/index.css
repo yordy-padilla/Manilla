@@ -11,7 +11,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 1;
+  -webkit-text-size-adjust: none;
+   text-size-adjust: none;
+
 }
 
 a {
