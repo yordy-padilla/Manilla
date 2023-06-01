@@ -6,7 +6,7 @@ import {collection, doc, onSnapshot, query} from 'firebase/firestore'
 
 const Producto = () => {
 
- const [dijes,setDijes] = useState([]);
+ const [dijes, setDijes] = useState([]);
  const [materialSeleccionado, setMaterialSeleccionado] = useState('');
  const [dijeSeleccionado, setDijeSeleccionado] = useState('');
  const [tipoSeleccionado, setTipoSeleccionado] = useState('');
