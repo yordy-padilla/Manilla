@@ -10,6 +10,7 @@ const Producto = () => {
  const [materialSeleccionado, setMaterialSeleccionado] = useState('');
  const [dijeSeleccionado, setDijeSeleccionado] = useState('');
  const [tipoSeleccionado, setTipoSeleccionado] = useState('');
+ const [pagoSeleccionado, setPagoSeleccionado] = useState('');
  const [opcionesSeleccionadas, setOpcionesSeleccionadas] = useState('');
 
     useEffect(() => {
@@ -28,58 +29,56 @@ const Producto = () => {
 
 
      useEffect(() => {
-        const opciones = `${materialSeleccionado} ${dijeSeleccionado} ${tipoSeleccionado}`;
+        const opciones = `${materialSeleccionado} ${dijeSeleccionado} ${tipoSeleccionado} ${pagoSeleccionado}`;
         setOpcionesSeleccionadas(opciones);
-      }, [materialSeleccionado, dijeSeleccionado, tipoSeleccionado]);
+      }, [materialSeleccionado, dijeSeleccionado, tipoSeleccionado, pagoSeleccionado]);
 
 
   return (
-        <div>
+    <div>
+        <div style={{ display: 'flex' }}></div>
             
-            <img src=".logo.pgn" alt="logo" width="300" height="200"/>
+            <img src="../src/images/logo.png" alt="logo" width="300" height="200"/>
             <hr/>
             <img src="https://cdnx.jumpseller.com/urbenmood/image/6850674/PS3493_Manilla_Pulsera_Hombres_Vintage_Cuero_Gancho_Marron_20cm.png?1684679556" alt="Manilla cuero" width="300" height="200"/>
             <hr/> 
             <label for="mate">Material:</label>
             <select id="mate" onChange={(e) => setMaterialSeleccionado(e.target.value)}>
-            <option value="opcion3">Cuero</option>
-            <option value="opcion4">Cuerda</option>
+            <option value="cue">Cuero</option>
+            <option value="crd">Cuerda</option>
             </select>
             <hr/>
             <label for="dije">Dije:</label>
             <select id="dije" onChange={(e) => setDijeSeleccionado(e.target.value)}>
-            <option value="opcion1">Ancla</option>
-            <option value="opcion2">Martillo</option>
+            <option value="anc">Ancla</option>
+            <option value="mar">Martillo</option>
             </select>
             <hr/>
             <label for="tipo">Tipo:</label>
             <select id="tipo" onChange={(e) => setTipoSeleccionado(e.target.value)}>
-            <option value="opcion5">Oro</option>
-            <option value="opcion6">Oro rosado</option>
-            <option value="opcion7">Plata</option>
-            <option value="opcion8">Niquel</option>
+            <option value="oro">Oro</option>
+            <option value="ros">Oro rosado</option>
+            <option value="pla">Plata</option>
+            <option value="niq">Niquel</option>
             </select>
             <hr/>
             <label for="pago">Metodo de pago:</label>
-            <select id="pago" onChange={(e) => setTipoSeleccionado(e.target.value)}>
-            <option value="opcion9">Dolares</option>
-            <option value="opcion10">Pesos</option>
+            <select id="pago" onChange={(e) => setPagoSeleccionado(e.target.value)}>
+            <option value="dol">Dolares</option>
+            <option value="pes">Pesos</option>
             </select>
-
-            
+     
             <ul className="list-group">
                     {  
                         dijes.map(item =>(
                             <div className="list-group-item" key={item.id}>
                                 <h1 className="lead">{item[opcionesSeleccionadas]}</h1>
+                                {item.id}
                             </div>
                         ))   
                     }        
-            </ul>
-           
-
-            
- </div>
+            </ul> 
+    </div>
  )
 
 }
