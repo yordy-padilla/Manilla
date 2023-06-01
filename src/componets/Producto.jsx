@@ -38,7 +38,7 @@ const Producto = () => {
     <div>
         <div style={{ display: 'flex' }}></div>
             
-            <img src="../src/images/logo.png" alt="logo" width="300" height="200"/>
+            <img src="../src/images/logo.png" alt="logo" width="600" height="400"/>
             <hr/>
             <img src="https://cdnx.jumpseller.com/urbenmood/image/6850674/PS3493_Manilla_Pulsera_Hombres_Vintage_Cuero_Gancho_Marron_20cm.png?1684679556" alt="Manilla cuero" width="300" height="200"/>
             <hr/> 
@@ -73,7 +73,6 @@ const Producto = () => {
                         dijes.map(item =>(
                             <div className="list-group-item" key={item.id}>
                                 <h1 className="lead">Precio unitario:  {item[opcionesSeleccionadas]}</h1>
-                               
                             </div>
                         ))   
                     }        
@@ -82,6 +81,5 @@ const Producto = () => {
  )
 
 }
-
 
 export default Producto
