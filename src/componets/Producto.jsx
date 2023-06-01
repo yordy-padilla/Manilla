@@ -6,7 +6,7 @@ import {collection, doc, onSnapshot, query} from 'firebase/firestore'
 
 const Producto = () => {
 
- const [dijes,setDijes] = useState([]);
+ const [dijes, setDijes] = useState([]);
  const [materialSeleccionado, setMaterialSeleccionado] = useState('');
  const [dijeSeleccionado, setDijeSeleccionado] = useState('');
  const [tipoSeleccionado, setTipoSeleccionado] = useState('');
@@ -44,18 +44,21 @@ const Producto = () => {
             <hr/> 
             <label for="mate">Material:</label>
             <select id="mate" onChange={(e) => setMaterialSeleccionado(e.target.value)}>
+            <option value="vac"> - </option>
             <option value="cue">Cuero</option>
             <option value="crd">Cuerda</option>
             </select>
             <hr/>
             <label for="dije">Dije:</label>
             <select id="dije" onChange={(e) => setDijeSeleccionado(e.target.value)}>
+            <option value="vac"> - </option>
             <option value="anc">Ancla</option>
             <option value="mar">Martillo</option>
             </select>
             <hr/>
             <label for="tipo">Tipo:</label>
             <select id="tipo" onChange={(e) => setTipoSeleccionado(e.target.value)}>
+            <option value="vac"> - </option>
             <option value="oro">Oro</option>
             <option value="ros">Oro rosado</option>
             <option value="pla">Plata</option>
@@ -64,6 +67,7 @@ const Producto = () => {
             <hr/>
             <label for="pago">Metodo de pago:</label>
             <select id="pago" onChange={(e) => setPagoSeleccionado(e.target.value)}>
+            <option value="vac"> - </option>
             <option value="dol">Dolares</option>
             <option value="pes">Pesos</option>
             </select>
@@ -72,7 +76,7 @@ const Producto = () => {
                     {  
                         dijes.map(item =>(
                             <div className="list-group-item" key={item.id}>
-                                <h1 className="lead">Precio unitario: {item[opcionesSeleccionadas]}</h1>
+                                <h1 className="lead">{item[opcionesSeleccionadas]}</h1>
                             </div>
                         ))   
                     }        
