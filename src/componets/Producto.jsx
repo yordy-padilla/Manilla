@@ -68,7 +68,7 @@ const Producto = () => {
             <label for="pago">Metodo de pago:</label>
             <select id="pago" onChange={(e) => setPagoSeleccionado(e.target.value)}>
             <option value="vac"> - </option>
-            <option value="dol">Dolares</option>
+            <option value="dol">Dolar</option>
             <option value="pes">Pesos</option>
             </select>
      
