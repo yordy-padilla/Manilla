@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import {db} from '../firebase'
+import {db} from '../Firebase.js'
 import {collection, doc, onSnapshot, query} from 'firebase/firestore'
 
 
