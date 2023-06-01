@@ -72,7 +72,7 @@ const Producto = () => {
                     {  
                         dijes.map(item =>(
                             <div className="list-group-item" key={item.id}>
-                                <h1 className="lead">Precio unitario:  {item[opcionesSeleccionadas]}</h1>
+                                <h1 className="lead">Precio unitario: {item[opcionesSeleccionadas]}</h1>
                             </div>
                         ))   
                     }        
